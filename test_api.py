@@ -1,4 +1,4 @@
-from .api import *
+from api import *
 import unittest
 from flask import Flask, request
 import requests
