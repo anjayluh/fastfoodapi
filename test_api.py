@@ -7,15 +7,15 @@ import json
 
 class TestOrdersUsingRequests(unittest.TestCase):
     def test_abort_if_order_doesnt_exist(self):
-        response = requests.get('http://localhost:5000/v1/orders/order10')
+        response = requests.get('http://127.0.0.1:5000/v1/orders/order10')
         self.assertEqual(response.status_code, 404)
     def test_get_order_id(self):
-        response = requests.get('http://localhost:5000/v1/orders/order1')
+        response = requests.get('http://127.0.0.1:5000/v1/orders/order1')
         self.assertEqual(response.status_code, 200)
         print(response.status_code)
     #test get all orders
     def test_get_orders(self):
-        response = requests.get('http://localhost:5000/v1/orders')
+        response = requests.get('http://127.0.0.1:5000/v1/orders')
         self.assertEqual(response.status_code, 200)
         print(response.status_code)
 
