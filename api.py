@@ -5,6 +5,7 @@ app = Flask(__name__)
 api = Api(app)
 
 orders = {
+    'order0': {'milk': 'Here is your french toast'},
     'order1': {'french toast': 'Here is your french toast'},
     'order2': {'fries': 'A pack of fries'},
     'order3': {'new order': 'Your new order will come here!'},
@@ -37,6 +38,7 @@ class Order(Resource):
     def delete(self, order_id):
         abort_if_order_doesnt_exist(order_id)
         del orders[order_id]
+
         return 'Order deleted', 204
     def put(self, order_id):
         args = parser.parse_args()
@@ -44,7 +46,7 @@ class Order(Resource):
         orders[order_id] = order
         return order, 201
 
-api.add_resource(Orders,'/')
-api.add_resource(Order, '/<string:order_id>')
+api.add_resource(Orders,'/v1/orders')
+api.add_resource(Order, '/v1/orders/<string:order_id>')
 if __name__ == '__main__':
     app.run(debug=True)
