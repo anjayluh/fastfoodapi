@@ -6,3 +6,5 @@ myenv/
 .vscode
 __pycache__/
 .pytest_cache/
+.coverage
+.coveragerc
