@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.org/anjayluh/fastfoodapi.svg?branch=testing)](https://travis-ci.org/anjayluh/fastfoodapi)
+The application is running on https://my-fast-food-api-heroku.herokuapp.com/v1/orders
