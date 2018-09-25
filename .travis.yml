@@ -11,8 +11,6 @@ install:
 script:
     - pytest
     -coverage run --source=. -m unittest
-    
+
 after_success:
     - coveralls
-discover
-  - coverage report

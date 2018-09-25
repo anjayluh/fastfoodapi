@@ -4,12 +4,7 @@ from flask_restful import Api, Resource, abort, reqparse
 app = Flask(__name__)
 api = Api(app)
 
-orders = {
-    'order0': {'milk': 'Here is your french toast'},
-    'order1': {'french toast': 'Here is your french toast'},
-    'order2': {'fries': 'A pack of fries'},
-    'order3': {'new order': 'Your new order will come here!'},
-}
+orders = {}
 
 '''Test if an order does not exist and siplay a clear error message'''
 def abort_if_order_doesnt_exist(order_id):
@@ -26,7 +21,10 @@ class Orders(Resource):
         return {'orders':orders}
     def post(self):
         args = parser.parse_args()
-        order_id = int(max(orders.keys()).lstrip('order')) + 1
+        if orders=={}:
+            order_id = 1
+        else:
+            order_id = int(max(orders.keys()).lstrip('order')) + 1
         order_id = 'order%i' % order_id
         orders[order_id] = {'my_order': args['order']}
         return orders, 201
@@ -49,5 +47,3 @@ class Order(Resource):
 
 api.add_resource(Orders,'/v1/orders')
 api.add_resource(Order, '/v1/orders/<string:order_id>')
-if __name__ == '__main__':
-    app.run(debug=True)
