@@ -1,13 +1,15 @@
-from api import *
-import unittest
 from flask import Flask, request
 import requests
-import json
+from api import *
+import unittest
+
+
 
 class TestOrdersUsingRequests(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
 
+    '''Test if order doesn't works'''
     def test_abort_if_order_doesnt_exist(self):
         response = self.client.get('/v1/orders/order10')
         self.assertEqual(response.status_code, 404)

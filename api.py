@@ -11,6 +11,7 @@ orders = {
     'order3': {'new order': 'Your new order will come here!'},
 }
 
+'''Test if an order does not exist and siplay a clear error message'''
 def abort_if_order_doesnt_exist(order_id):
     if order_id not in orders:
         abort(404, message="Order {} doesn't exist".format(order_id))
