@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/anjayluh/fastfoodapi.svg?branch=testing)](https://travis-ci.org/anjayluh/fastfoodapi)
+
+[![Coverage Status](https://coveralls.io/repos/github/anjayluh/apiendpoints/badge.svg?branch=testing)](https://coveralls.io/github/anjayluh/apiendpoints?branch=testing)
+
 The application is running on https://my-fast-food-api-heroku.herokuapp.com/v1/orders
 
 Installation steps.
