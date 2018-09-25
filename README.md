@@ -6,7 +6,9 @@ Fast Food Api
 
 The application is running on https://my-fast-food-api-heroku.herokuapp.com/v1/orders
 
+
 Getting Started
+
 Installation steps.
 Clone the repo to your computer
 Install virtual environment
