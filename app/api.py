@@ -13,7 +13,9 @@ def abort_if_order_doesnt_exist(order_id):
 
 parser = reqparse.RequestParser()
 parser.add_argument('order')
+parser.add_argument('price')
 
+#orders = {'order_id': {'my_order': 'fries', 'price': 3000}}
 
 # Show all orders
 class Orders(Resource):
@@ -21,13 +23,18 @@ class Orders(Resource):
         return {'orders':orders}
     def post(self):
         args = parser.parse_args()
-        if orders=={}:
-            order_id = 1
+        if not str(args['order']).strip():
+            abort(400, message="Order cannot be empty")
         else:
-            order_id = int(max(orders.keys()).lstrip('order')) + 1
-        order_id = 'order%i' % order_id
-        orders[order_id] = {'my_order': args['order']}
-        return orders, 201
+            print("Args is {}".format(args))
+            if not orders:
+                order_id = 1
+            else:
+                order_id = int(max(orders.keys()).lstrip('order')) + 1
+            order_id = 'order%i' % order_id
+            orders[order_id] = {'my_order': args['order'], 'price':args['price']}
+            print(orders)
+            return orders, 201
 
 # shows a single order and lets you delete an order
 class Order(Resource):
@@ -47,3 +54,4 @@ class Order(Resource):
 
 api.add_resource(Orders,'/v1/orders')
 api.add_resource(Order, '/v1/orders/<string:order_id>')
+
