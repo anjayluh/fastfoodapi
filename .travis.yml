@@ -9,7 +9,7 @@ install:
     -pip install pytest-cov
 
 script:
-    - pytest
+    - pytest tests --cov=app --cov-report term-missing
     -coverage run --source=. -m unittest
 
 after_success:
