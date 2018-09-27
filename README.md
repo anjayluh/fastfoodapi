@@ -10,11 +10,11 @@
 **Getting Started**
 
 >**Prerequisites**
-*Python 3 or above
+`Python 3` or above
 
 >**Installation steps.**
 ```
-    *Clone the repo to your computer
+    *Clone the repo to your computer*
     *Install virtual environment
     *Activate the virtual environment
     *Run pip install -r requirements.txt
