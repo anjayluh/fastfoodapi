@@ -5,8 +5,6 @@ python:
 
 install:
     - pip install -r requirements.txt
-    - pip install pytest
-    -pip install pytest-cov
 
 script:
     - pytest tests --cov=app --cov-report term-missing
