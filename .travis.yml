@@ -1,14 +1,13 @@
 language: python
 
-python: 
-    - "3.5"
+python:
+ - "3.6"
+cache: pip
 
 install:
-    - pip install -r requirements.txt
+ - pip install -r requirements.txt
 
 script:
-    - pytest tests --cov=app --cov-report term-missing
+ - pytest --cov=app
 after_success:
-    - coveralls
-
-    
+ - coveralls
