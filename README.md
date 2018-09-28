@@ -1,4 +1,6 @@
-######Fast Food Api
+### Fast Food Api ###
+
+Fast Food API is an app with a set of API endpoints using data structures. It has post, put, get and delete endpoints
 
 [![Build Status](https://travis-ci.org/anjayluh/fastfoodapi.svg?branch=testing)](https://travis-ci.org/anjayluh/fastfoodapi)
 
@@ -26,7 +28,7 @@
     `Unittest`
 
 >Authors
-    ###Naigaga Angella @anjayluh
+### Naigaga Angella @anjayluh ###
 
 >Acknowledgments
     `Flask mini api tutorial`
