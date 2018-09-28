@@ -1,10 +1,8 @@
-#Fast Food Api
-'''
+######Fast Food Api
+
 [![Build Status](https://travis-ci.org/anjayluh/fastfoodapi.svg?branch=testing)](https://travis-ci.org/anjayluh/fastfoodapi)
-'''
-'''
-[![Coverage Status](https://coveralls.io/repos/github/anjayluh/apiendpoints/badge.svg?branch=testing)](https://coveralls.io/github/anjayluh/apiendpoints?branch=testing)
-'''
+
+[![Coverage Status](https://coveralls.io/repos/github/anjayluh/fastfoodapi/badge.svg?branch=master)](https://coveralls.io/github/anjayluh/fastfoodapi?branch=master)
 
 >The application is running on (https://my-fast-food-api-heroku.herokuapp.com/v1/orders)
 
