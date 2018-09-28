@@ -10,8 +10,6 @@ install:
 
 script:
     - pytest tests --cov=app --cov-report term-missing
-    -coverage run --source=. -m unittest
-
 after_success:
     - coveralls
 
