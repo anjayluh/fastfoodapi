@@ -8,7 +8,7 @@ chardet==3.0.4
 click==6.7
 colorama==0.3.9
 cycler==0.10.0
-Django==2.0.1
+Django==2.2.20
 django-countries==5.2
 Flask==1.0.2
 Flask-RESTful==0.3.6
