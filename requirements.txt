@@ -27,7 +27,7 @@ matplotlib==2.2.2
 mccabe==0.6.1
 mocker==1.1.1
 more-itertools==4.2.0
-numpy==1.14.5
+numpy==1.22.0
 Pillow==5.0.0
 pipenv==2018.6.25
 pluggy==0.6.0
